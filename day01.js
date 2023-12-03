@@ -10,9 +10,9 @@ function getCalibrationValues(line) {
 
 // First solution: 54630
 
-input.split('\n').reduce((acc, line) => {
-  return acc + getCalibrationValues(line);
-}, 0)
+const calibrationSum1 = input.split('\n').reduce((acc, line) => acc + getCalibrationValues(line), 0);
+
+console.log(calibrationSum1);
 
 // Second solution: 54770
 
@@ -28,8 +28,9 @@ const substitutions = {
   'nine': 'nine9nine',
 }
 
-input.split('\n').reduce((acc, line) => {
-  Object.keys(substitutions).forEach((substitution) => line = line.replaceAll(substitution, substitutions[substitution]))
+const calibrationSum2 = input.split('\n').reduce((acc, line) => {
+  Object.keys(substitutions).forEach((substitution) => line = line.replaceAll(substitution, substitutions[substitution]));
   return acc + getCalibrationValues(line);
-}, 0)
+}, 0);
 
+console.log(calibrationSum2);

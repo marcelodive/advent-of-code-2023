@@ -16,7 +16,7 @@ function getCalibrationValues(line) {
 
 const calibrationSum1 = input.split('\n').reduce((acc, line) => acc + getCalibrationValues(line), 0);
 
-console.log(calibrationSum1);
+console.log('First solution:', calibrationSum1);
 
 // Second solution:
 
@@ -37,4 +37,4 @@ const calibrationSum2 = input.split('\n').reduce((acc, line) => {
   return acc + getCalibrationValues(line);
 }, 0);
 
-console.log(calibrationSum2);
+console.log('Second solution:', calibrationSum2);

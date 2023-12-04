@@ -1,8 +1,15 @@
 // https://adventofcode.com/2023/day/3
 
-const input = `........954......104.......52......70..............206.806........708..........................217...............................440........
-...
-...152...........236.............95............................517......789.836.....236..194......................................202....720`
+const input = `467..114..
+...*......
+..35..633.
+......#...
+617*......
+.....+.58.
+..592.....
+......755.
+...$.*....
+.664.598..`;
 
 const lines = input.split('\n');
 
@@ -10,7 +17,7 @@ function retrieveAdjacentString(fromIndex, lineIndex, needle) {
   return lines[lineIndex]?.slice(fromIndex > 0 ? fromIndex - 1 : 0, fromIndex + needle.length + 1);
 }
 
-// First solution: 535235
+// First solution:
 
 function containSymbol(string) {
   return /[^A-Za-z0-9.]/.test(string.trim());
@@ -43,7 +50,7 @@ lines.forEach((line, lineIndex) => {
 
 console.log(firstSum); 
 
-// Second solution: 79844424
+// Second solution:
 
 function isAdjacentToTwoPartNumbers(fromIndex, lineIndex) {
   const adjacentAboveLine = retrieveAdjacentString(fromIndex, lineIndex - 1, '*');

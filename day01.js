@@ -1,20 +1,24 @@
 // https://adventofcode.com/2023/day/1
 
-const input = `eightfivesssxxmgthreethreeone1sevenhnz
-...
-dljxl7five6nrzfh5one`;
+const input = `two1nine
+eightwothree
+abcone2threexyz
+xtwone3four
+4nineeightseven2
+zoneight234
+7pqrstsixteen`;
 
 function getCalibrationValues(line) {
   return Number([...line].find(char => /\d/.test(char)) + [...line].reverse().find(char => /\d/.test(char)));
 }
 
-// First solution: 54630
+// First solution:
 
 const calibrationSum1 = input.split('\n').reduce((acc, line) => acc + getCalibrationValues(line), 0);
 
 console.log(calibrationSum1);
 
-// Second solution: 54770
+// Second solution:
 
 const substitutions = {
   'one': 'one1one',

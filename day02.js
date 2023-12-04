@@ -39,7 +39,7 @@ input.split('\n').forEach((line) => {
 
 const gameIdSums = Object.keys(gameValidityById).reduce((sum, gameId) => gameValidityById[gameId] ? sum + Number(gameId) : sum, 0);
 
-console.log(gameIdSums);
+console.log('First solution:', gameIdSums);
 
 // Second solution:
 
@@ -61,4 +61,4 @@ input.split('\n').forEach((line) => {
   powersSum = powersSum + Object.values(minQnt).reduce((sum, value) => sum * value, 1);
 })
 
-console.log(powersSum);
+console.log('Second solution:', powersSum);

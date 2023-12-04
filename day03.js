@@ -48,7 +48,7 @@ lines.forEach((line, lineIndex) => {
   }
 })
 
-console.log(firstSum); 
+console.log('First solution:', firstSum); 
 
 // Second solution:
 
@@ -117,4 +117,4 @@ lines.forEach((line, lineIndex) => {
   }
 });
 
-console.log(sumGearsRatio);
+console.log('Second solution:', sumGearsRatio);

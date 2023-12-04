@@ -30,10 +30,9 @@ console.log('First solution:', points);
 
 function cardPoints(numbers) {
   const [winningNumbers, myNumbers] = numbers.split('|');
-  const qnt = myNumbers.split(' ')
+  return myNumbers.split(' ')
     .reduce((matchesQnt, number) => (number && winningNumbers
       .includes(` ${number} `)) ? matchesQnt + 1 : matchesQnt, 0);
-  return Number(qnt);
 }
 
 const games = scratchcards.reduce((games, card) => {

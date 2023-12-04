@@ -23,7 +23,6 @@ const points = scratchcards.reduce((points, card) => {
   return cardWorth + points;
 }, 0);
 
-
 console.log('First solution:', points);
 
 // Second solution:

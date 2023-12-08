@@ -138,7 +138,5 @@ const totalWinningsPt2 = sortedGames.reduce((totalWinnings, game, index) => {
   return totalWinnings + ((index + 1) * game.bid);
 }, 0)
 
-console.log(sortedGamesPt2);
-
 console.log('Second solution:', totalWinningsPt2);
 

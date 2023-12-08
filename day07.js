@@ -87,7 +87,7 @@ function replaceJoker(hand) {
     return qntByCard;
   }, [])
   .sort(({card: cardA}, {card: cardB}) => labelStrength[cardA] - labelStrength[cardB])
-  .sort(({quantity: quantityA}, {quantity: quantityB}) => quantityA = quantityB);
+  .sort(({quantity: quantityA}, {quantity: quantityB}) => quantityB - quantityA);
 
   return qntByCard.length ? hand.replaceAll('J', qntByCard[0].card) : hand;
 }
@@ -134,9 +134,8 @@ console.log('First solution:', totalWinnings);
 // Second solution:
 
 const sortedGamesPt2 = games.sort((gameA, gameB) => compareHands(gameA.hand, gameB.hand, true));
-const totalWinningsPt2 = sortedGames.reduce((totalWinnings, game, index) => {
+const totalWinningsPt2 = sortedGamesPt2.reduce((totalWinnings, game, index) => {
   return totalWinnings + ((index + 1) * game.bid);
 }, 0)
 
 console.log('Second solution:', totalWinningsPt2);
-
